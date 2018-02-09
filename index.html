@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Issue</title>
+</head>
+<body>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/three.js/87/three.min.js"></script>
+<script type="text/javascript" src="https://cdn.rawgit.com/mrdoob/three.js/master/examples/js/loaders/STLLoader.js"></script>
+<script type="text/javascript">
+	const stlLoader = new THREE.STLLoader();
+	var url1 = './testData/fromITK.stl'
+	var url2 = './testData/from3DSlicer.stl'
+	stlLoader.load(url1, function(geometry) {
+		console.log(geometry);
+	});
+	stlLoader.load(url2, function(geometry) {
+		console.log(geometry);
+	});
+</script>
+</body>
+</html>
